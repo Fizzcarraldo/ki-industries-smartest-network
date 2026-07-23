@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-95c656ac-dba7-40f4-955b-adb820946ce8/styles.css">
+  <script src="_ds/industry-95c656ac-dba7-40f4-955b-adb820946ce8/_ds_bundle.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://stats.scanventure.de/script.js" data-website-id="60d9bdc7-69da-45e7-9339-fb5717c0d906"></script>
+  <title>Vision &amp; Entwicklung — smartest.network</title>
+  <meta name="description" content="Wie aus einzelnen Unternehmen Schritt für Schritt Europas intelligenteste Infrastruktur für Unternehmenskooperation entsteht — die Vision hinter smartest.network.">
+</helmet>
+
+<div style="--leading: var(--space-8); --half: var(--space-4); --edge: clamp(20px, 5vw, 72px); background: var(--color-bg); min-height: 100%;">
+
+  <div style="background: var(--color-accent-900); color: #fff; text-align: center; padding: var(--space-2) var(--edge); font-size: 13px; line-height: var(--half);">
+    Demo-Website mit fiktiven Beispielinhalten — Zahlen, Namen, Projekte und Zitate dienen ausschließlich zur Veranschaulichung.
+  </div>
+
+  <header style="border-bottom: 1px solid var(--color-divider); position: sticky; top: 0; background: var(--color-bg); z-index: 10;">
+    <nav class="nav" style="max-width: 1280px; margin: 0 auto; padding: var(--space-3) var(--edge); flex-wrap: wrap; row-gap: var(--space-2); column-gap: var(--space-4); justify-content: center;">
+      <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">smartest.network</a>
+      <a href="index.html#network">Netzwerk</a>
+      <a href="index.html#projects">Projekte</a>
+      <a href="index.html#members">Mitglieder</a>
+      <a href="index.html#events">Veranstaltungen</a>
+      <a href="index.html#knowledge">Wissen</a>
+      <a href="index.html#about">Über uns</a>
+      <a href="vision.html" aria-current="page">Vision &amp; Entwicklung</a>
+      <a class="btn btn-primary" href="index.html#membership">Mitglied werden</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1280px; margin: 0 auto; padding: 0 var(--edge);">
+
+    <!-- HERO -->
+    <section style="padding: clamp(64px, 11vw, calc(var(--leading) * 5)) 0 clamp(48px, 8vw, calc(var(--leading) * 3)); text-align: center;">
+      <div class="reveal" style="max-width: 760px; margin: 0 auto;">
+        <span class="tag tag-accent">Vision &amp; Entwicklung</span>
+        <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(32px, 5.4vw, 64px); line-height: 1.06; letter-spacing: 0.005em; text-transform: uppercase; margin: var(--half) 0 0; text-wrap: pretty; hyphens: auto;">
+          Wie Europas intelligentestes Unternehmensnetzwerk entsteht.
+        </h1>
+        <p style="font-size: clamp(16px, 1.6vw, 19px); line-height: var(--leading); max-width: 58ch; margin: calc(var(--leading) * 1.1) auto 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">
+          Wir entwickeln keine Plattform. Wir entwickeln eine Infrastruktur, auf der Unternehmen schneller Vertrauen aufbauen, bessere Partner finden und gemeinsam erfolgreicher werden.
+        </p>
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; margin-top: var(--leading);">
+          <a class="btn btn-primary" href="index.html#membership">Jetzt Teil des Netzwerks werden</a>
+        </div>
+      </div>
+      <div aria-hidden="true" style="margin-top: calc(var(--leading) * 2.2); color: color-mix(in srgb, var(--color-text) 40%, transparent); animation: vh-bob 2.2s ease-in-out infinite;">
+        <i data-lucide="chevron-down" style="width: 22px; height: 22px; stroke-width: 1.5;"></i>
+      </div>
+      <style>
+        @keyframes vh-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+        @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; } }
+      </style>
+    </section>
+
+    <!-- SCROLL STORY -->
+    <section aria-labelledby="story-heading" style="padding: 0 0 calc(var(--leading) * 2);">
+      <h2 id="story-heading" class="sr-only">Die fünf Entwicklungsstufen des Netzwerks</h2>
+
+      <div class="vh-story">
+
+        <!-- STICKY RAIL: visualization + step indicator -->
+        <div class="vh-story__rail">
+          <p class="sr-only">Eine sich aufbauende Netzwerkgrafik: Sie zeigt, wie aus einzelnen, unverbundenen Unternehmen über Verbindungen und Kooperation ein Netzwerk mit wachsendem gegenseitigen Vertrauen und schließlich einer zentralen, intelligenten Vermittlungsinstanz entsteht.</p>
+          <svg class="vh-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
+            <!-- edges: ring (phase 2) -->
+            <line class="vh-edge" data-phase="2" x1="220" y1="46"  x2="344" y2="96"  />
+            <line class="vh-edge" data-phase="2" x1="344" y1="96"  x2="394" y2="220" />
+            <line class="vh-edge" data-phase="2" x1="394" y1="220" x2="344" y2="344" />
+            <line class="vh-edge" data-phase="2" x1="344" y1="344" x2="220" y2="394" />
+            <line class="vh-edge" data-phase="2" x1="220" y1="394" x2="96"  y2="344" />
+            <line class="vh-edge" data-phase="2" x1="96"  y1="344" x2="46"  y2="220" />
+            <line class="vh-edge" data-phase="2" x1="46"  y1="220" x2="96"  y2="96"  />
+            <line class="vh-edge" data-phase="2" x1="96"  y1="96"  x2="220" y2="46"  />
+            <!-- edges: inner-to-outer (phase 3) -->
+            <line class="vh-edge" data-phase="3" x1="280" y1="160" x2="344" y2="96"  />
+            <line class="vh-edge" data-phase="3" x1="280" y1="160" x2="394" y2="220" />
+            <line class="vh-edge" data-phase="3" x1="280" y1="280" x2="344" y2="344" />
+            <line class="vh-edge" data-phase="3" x1="280" y1="280" x2="220" y2="394" />
+            <line class="vh-edge" data-phase="3" x1="160" y1="280" x2="96"  y2="344" />
+            <line class="vh-edge" data-phase="3" x1="160" y1="280" x2="46"  y2="220" />
+            <line class="vh-edge" data-phase="3" x1="160" y1="160" x2="96"  y2="96"  />
+            <line class="vh-edge" data-phase="3" x1="160" y1="160" x2="220" y2="46"  />
+            <!-- edges: hub (phase 5) -->
+            <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="280" y2="160" />
+            <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="280" y2="280" />
+            <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="160" y2="280" />
+            <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="160" y2="160" />
+
+            <!-- trust rings (phase 4) -->
+            <circle class="vh-node-ring" data-phase="4" cx="220" cy="46"  r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="394" cy="220" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="220" cy="394" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="46"  cy="220" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="344" cy="96"  r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="344" cy="344" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="96"  cy="344" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="96"  cy="96"  r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="280" cy="160" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="280" cy="280" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="160" cy="280" r="13" />
+            <circle class="vh-node-ring" data-phase="4" cx="160" cy="160" r="13" />
+
+            <!-- outer nodes (phase 1: cardinal points) -->
+            <circle class="vh-node-dot" data-phase="1" cx="220" cy="46"  r="5.5" />
+            <circle class="vh-node-dot" data-phase="1" cx="394" cy="220" r="5.5" />
+            <circle class="vh-node-dot" data-phase="1" cx="220" cy="394" r="5.5" />
+            <circle class="vh-node-dot" data-phase="1" cx="46"  cy="220" r="5.5" />
+            <!-- outer nodes (phase 2: diagonals) -->
+            <circle class="vh-node-dot" data-phase="2" cx="344" cy="96"  r="5.5" />
+            <circle class="vh-node-dot" data-phase="2" cx="344" cy="344" r="5.5" />
+            <circle class="vh-node-dot" data-phase="2" cx="96"  cy="344" r="5.5" />
+            <circle class="vh-node-dot" data-phase="2" cx="96"  cy="96"  r="5.5" />
+            <!-- inner nodes (phase 3) -->
+            <circle class="vh-node-dot" data-phase="3" cx="280" cy="160" r="5.5" />
+            <circle class="vh-node-dot" data-phase="3" cx="280" cy="280" r="5.5" />
+            <circle class="vh-node-dot" data-phase="3" cx="160" cy="280" r="5.5" />
+            <circle class="vh-node-dot" data-phase="3" cx="160" cy="160" r="5.5" />
+
+            <!-- hub (phase 5) -->
+            <circle class="vh-hub-pulse" data-phase="5" cx="220" cy="220" r="9" />
+            <circle class="vh-hub" data-phase="5" cx="220" cy="220" r="8.5" />
+          </svg>
+
+          <div class="blueprint vh-step-list" style="padding: var(--half) var(--space-3); margin-top: var(--half);">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span class="tag tag-outline vh-step" data-step="1" style="font-size: 11px;">01 Identität</span>
+            <span class="vh-arrow" aria-hidden="true">↓</span>
+            <span class="tag tag-outline vh-step" data-step="2" style="font-size: 11px;">02 Verbindungen</span>
+            <span class="vh-arrow" aria-hidden="true">↓</span>
+            <span class="tag tag-outline vh-step" data-step="3" style="font-size: 11px;">03 Kooperation</span>
+            <span class="vh-arrow" aria-hidden="true">↓</span>
+            <span class="tag tag-outline vh-step" data-step="4" style="font-size: 11px;">04 Vertrauen</span>
+            <span class="vh-arrow" aria-hidden="true">↓</span>
+            <span class="tag tag-outline vh-step" data-step="5" style="font-size: 11px;">05 Intelligenz</span>
+          </div>
+        </div>
+
+        <!-- SCROLLING NARRATIVE -->
+        <div>
+
+          <div class="vh-phase" data-phase="1">
+            <div class="reveal">
+              <span class="card-kicker">01 · Identität</span>
+              <h3 style="font-size: clamp(24px,3vw,34px); text-transform: uppercase; margin: var(--space-2) 0 0;">Vertrauen beginnt mit Transparenz.</h3>
+              <p style="font-size: 15px; line-height: var(--leading); color: var(--color-accent-700); font-weight: 600; margin: var(--half) 0 0;">Jede sichtbare Kompetenz macht das Netzwerk für alle anderen nützlicher.</p>
+              <p style="font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--space-2) 0 0; max-width: 52ch;">Unternehmen und Experten erhalten eine verifizierte digitale Identität. Kompetenzen werden sichtbar — die Basis, auf der alles Weitere entsteht.</p>
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--leading);">
+                <span class="tag tag-outline">Verifizierte Profile</span>
+                <span class="tag tag-outline">Expertenprofile</span>
+                <span class="tag tag-outline">Kompetenzen</span>
+                <span class="tag tag-outline">Organisationen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vh-phase" data-phase="2">
+            <div class="reveal">
+              <span class="card-kicker">02 · Verbindungen</span>
+              <h3 style="font-size: clamp(24px,3vw,34px); text-transform: uppercase; margin: var(--space-2) 0 0;">Aus Sichtbarkeit werden Beziehungen.</h3>
+              <p style="font-size: 15px; line-height: var(--leading); color: var(--color-accent-700); font-weight: 600; margin: var(--half) 0 0;">Jede neue Verbindung öffnet allen Beteiligten Zugang zu neuem Wissen.</p>
+              <p style="font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--space-2) 0 0; max-width: 52ch;">Die Plattform verbindet Unternehmen intelligent — nicht zufällig, sondern auf Basis von Kompetenzen, Interessen und Zielen.</p>
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--leading);">
+                <span class="tag tag-outline">KI-Matching</span>
+                <span class="tag tag-outline">Unternehmenssuche</span>
+                <span class="tag tag-outline">Experten finden</span>
+                <span class="tag tag-outline">Kooperationsgesuche</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vh-phase" data-phase="3">
+            <div class="reveal">
+              <span class="card-kicker">03 · Kooperation</span>
+              <h3 style="font-size: clamp(24px,3vw,34px); text-transform: uppercase; margin: var(--space-2) 0 0;">Aus Verbindungen werden gemeinsame Projekte.</h3>
+              <p style="font-size: 15px; line-height: var(--leading); color: var(--color-accent-700); font-weight: 600; margin: var(--half) 0 0;">Jedes Projekt erzeugt Erfahrung, von der das gesamte Netzwerk profitiert.</p>
+              <p style="font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--space-2) 0 0; max-width: 52ch;">Menschen arbeiten nicht mehr nebeneinander, sondern miteinander — an echten Projekten mit echtem Ergebnis.</p>
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--leading);">
+                <span class="tag tag-outline">Projekte</span>
+                <span class="tag tag-outline">Teams</span>
+                <span class="tag tag-outline">Zusammenarbeit</span>
+                <span class="tag tag-outline">KI-Unterstützung</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vh-phase" data-phase="4">
+            <div class="reveal">
+              <span class="card-kicker">04 · Vertrauen</span>
+              <h3 style="font-size: clamp(24px,3vw,34px); text-transform: uppercase; margin: var(--space-2) 0 0;">Jede Zusammenarbeit stärkt das ganze Netzwerk.</h3>
+              <p style="font-size: 15px; line-height: var(--leading); color: var(--color-accent-700); font-weight: 600; margin: var(--half) 0 0;">Nachweisbare Ergebnisse machen jede künftige Vermittlung treffsicherer.</p>
+              <p style="font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--space-2) 0 0; max-width: 52ch;">Reputation entsteht durch nachweisbare Zusammenarbeit — nicht durch Selbstdarstellung.</p>
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--leading);">
+                <span class="tag tag-outline">Referenzen</span>
+                <span class="tag tag-outline">Empfehlungen</span>
+                <span class="tag tag-outline">Reputation</span>
+                <span class="tag tag-outline">Verifizierte Kooperationen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vh-phase" data-phase="5">
+            <div class="reveal">
+              <span class="card-kicker">05 · Intelligenz</span>
+              <h3 style="font-size: clamp(24px,3vw,34px); text-transform: uppercase; margin: var(--space-2) 0 0;">Jetzt beginnt das Netzwerk, selbst Mehrwert zu erzeugen.</h3>
+              <p style="font-size: 15px; line-height: var(--leading); color: var(--color-accent-700); font-weight: 600; margin: var(--half) 0 0;">Je mehr Erfahrung entsteht, desto treffsicherer werden die Empfehlungen für alle.</p>
+              <p style="font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--space-2) 0 0; max-width: 52ch;">Die Plattform erkennt Geschäftschancen, empfiehlt Partner und hilft Unternehmen, bessere Entscheidungen zu treffen.</p>
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--leading);">
+                <span class="tag tag-outline">Geschäftschancen</span>
+                <span class="tag tag-outline">Partnerempfehlungen</span>
+                <span class="tag tag-outline">Unternehmensgraph</span>
+                <span class="tag tag-outline">KI-gestützte Entscheidungen</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section style="padding: calc(var(--leading) * 2) 0 calc(var(--leading) * 3); text-align: center; border-top: 1px solid var(--color-divider);">
+      <div class="reveal">
+        <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.6vw,46px); line-height: 1.15; text-transform: uppercase; margin: 0 auto; max-width: 26ch;">Je mehr Unternehmen teilnehmen, desto intelligenter wird das Netzwerk.</h2>
+        <p style="font-size: 16px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--half) auto 0; max-width: 56ch;">Jede neue Verbindung erhöht den Nutzen für alle. Jede erfolgreiche Kooperation verbessert zukünftige Kooperationen. So entsteht Schritt für Schritt Europas intelligente Infrastruktur für Unternehmenskooperation.</p>
+        <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; margin-top: var(--leading);">
+          <a class="btn btn-primary" href="index.html#membership">Teil der Vision werden</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; align-items: center; padding: calc(var(--leading) * 1.5) 0; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 70%, transparent);">
+      <span>© 2026 smartest.network</span>
+      <div style="display: flex; gap: var(--space-4);">
+        <a href="https://smartest.network/629-2-2/">Datenschutz</a>
+        <a href="https://smartest.network/impressum-2-2/">Impressum</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (window.lucide) window.lucide.createIcons();
+    this._initEdgeLengths();
+    this._initScrollDrivenState();
+  }
+  componentDidUpdate() {
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  _initEdgeLengths() {
+    document.querySelectorAll('.vh-edge').forEach((line) => {
+      const len = line.getTotalLength ? line.getTotalLength() : 400;
+      line.style.strokeDasharray = String(len);
+      line.style.strokeDashoffset = String(len);
+    });
+  }
+
+  /* A single rAF-throttled scroll handler drives both the reveal-on-scroll
+   * fades and the network phase state. IntersectionObserver's threshold/
+   * rootMargin bands are too thin to survive a fast or instant scroll (End
+   * key, fling, deep link) — a section can jump straight past the trigger
+   * zone without ever reporting isIntersecting, leaving the diagram stuck
+   * on a stale phase. Recomputing from live geometry on every frame can't
+   * skip a state, regardless of how the scroll position changed. */
+  _initScrollDrivenState() {
+    const phaseSections = Array.from(document.querySelectorAll('.vh-phase'));
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    if (!phaseSections.length && !revealEls.length) return;
+
+    const setActivePhase = (phase) => {
+      document.querySelectorAll('[data-phase]').forEach((el) => {
+        const p = Number(el.getAttribute('data-phase'));
+        el.classList.toggle('is-active', p <= phase);
+      });
+      document.querySelectorAll('.vh-edge').forEach((edge) => {
+        edge.classList.toggle('is-trusted', phase >= 4 && Number(edge.getAttribute('data-phase')) <= phase);
+      });
+      document.querySelectorAll('.vh-step').forEach((step) => {
+        const active = Number(step.getAttribute('data-step')) <= phase;
+        step.classList.toggle('tag-accent', active);
+        step.classList.toggle('tag-outline', !active);
+      });
+    };
+
+    let ticking = false;
+    const compute = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+
+      let phase = 0;
+      for (const el of phaseSections) {
+        if (el.getBoundingClientRect().top <= vh / 2) {
+          phase = Number(el.getAttribute('data-phase'));
+        }
+      }
+      if (phase > 0) setActivePhase(phase);
+
+      revealEls.forEach((el) => {
+        if (!el.classList.contains('is-visible') && el.getBoundingClientRect().top < vh * 0.92) {
+          el.classList.add('is-visible');
+        }
+      });
+    };
+    const onScroll = () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(compute); }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    compute();
+  }
+}
+</script>
+</body>
+</html>

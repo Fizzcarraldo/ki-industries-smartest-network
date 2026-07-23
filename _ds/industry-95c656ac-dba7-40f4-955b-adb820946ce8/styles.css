@@ -366,31 +366,17 @@ noscript .vh-node-dot, noscript .vh-node-ring, noscript .vh-edge, noscript .vh-h
 .vh-phase:first-child { border-top: none; }
 .vh-step-list { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
 .vh-step-list .vh-arrow { color: var(--color-accent-700); font-size: 13px; line-height: 1; opacity: .5; }
+/* A per-phase diagram, full width, in normal flow, fading in together with
+   that phase's own text via .reveal — full width, hidden on desktop
+   (where the shared animated .vh-story__rail already does this job in its
+   own column). Each one is a static snapshot of the network's cumulative
+   state through that phase (baked into fixed is-active/is-trusted classes
+   in the markup, not JS-driven), so it needs no sticky/fixed positioning
+   and no scroll-tracking at all — it simply is what it is once revealed. */
+.vh-phase-viz { display: none; }
 @media (max-width: 880px) {
-  /* position: sticky is bounded by the rail's containing block, not by
-     "until the next sibling starts" — with only one narrow column to work
-     with, that containing block is exactly as tall as the story itself, so
-     a sticky rail here stays pinned for the *entire* scroll and sits on
-     top of the phase text the whole time (there's no second column for it
-     to occupy instead, like on desktop). Fixed-position it as a small
-     corner badge instead — out of the text's way, shown only while the
-     story section is on screen (toggled via .vh-story__rail.is-in-view,
-     set by the same scroll handler that drives the phase state) so it
-     doesn't float over the hero or the closing CTA too. */
   .vh-story { grid-template-columns: 1fr; }
-  .vh-story__rail {
-    position: fixed; top: 72px; right: 10px; z-index: 5; width: 72px;
-    padding: var(--space-1); background: var(--color-bg);
-    border: 1px solid var(--color-divider); box-shadow: var(--shadow-md);
-    opacity: 0; transform: translateY(-8px);
-    transition: opacity .3s ease, transform .3s ease;
-    pointer-events: none;
-  }
-  .vh-story__rail.is-in-view { opacity: 1; transform: none; }
-  .vh-story__rail .vh-step-list { display: none; }
-  .vh-story__rail .vh-phase-label { display: block !important; }
-  @media (prefers-reduced-motion: reduce) {
-    .vh-story__rail { transition: none; }
-  }
+  .vh-story__rail { display: none; }
+  .vh-phase-viz { display: block; max-width: 300px; margin: 0 auto var(--leading); }
 }
 

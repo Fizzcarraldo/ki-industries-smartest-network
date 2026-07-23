@@ -366,17 +366,39 @@ noscript .vh-node-dot, noscript .vh-node-ring, noscript .vh-edge, noscript .vh-h
 .vh-phase:first-child { border-top: none; }
 .vh-step-list { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
 .vh-step-list .vh-arrow { color: var(--color-accent-700); font-size: 13px; line-height: 1; opacity: .5; }
-/* A per-phase diagram, full width, in normal flow, fading in together with
-   that phase's own text via .reveal — full width, hidden on desktop
-   (where the shared animated .vh-story__rail already does this job in its
-   own column). Each one is a static snapshot of the network's cumulative
-   state through that phase (baked into fixed is-active/is-trusted classes
-   in the markup, not JS-driven), so it needs no sticky/fixed positioning
-   and no scroll-tracking at all — it simply is what it is once revealed. */
-.vh-phase-viz { display: none; }
 @media (max-width: 880px) {
-  .vh-story { grid-template-columns: 1fr; }
-  .vh-story__rail { display: none; }
-  .vh-phase-viz { display: block; max-width: 300px; margin: 0 auto var(--leading); }
+  /* Split-screen. IMPORTANT: it's .vh-story ITSELF that's sticky here, as
+     one unit — not the rail alone. Sticky positioning doesn't push normal-
+     flow siblings out of its way (verified this three times over on this
+     page already): if only the rail stuck and the pane stayed in normal
+     flow, the pane's flow position would keep drifting away from the
+     rail's actual stuck position as you scroll, and they'd overlap by an
+     ever-growing amount instead of sitting cleanly stacked. Making the
+     *whole* rail+pane block sticky avoids that entirely: internally it's
+     plain flexbox (rail flex:none, pane flex:1) with no independent
+     stickiness, so the two can never drift apart — and the whole block
+     rides the containing .vh-story-section's extra height as its "stuck"
+     budget while the reader works through the pane's own internal scroll
+     (which, being nested scrolling, doesn't move the outer page position
+     at all until the pane bottoms out — see the JS in _fitMobileStory /
+     _initScrollDrivenState for how the header's real height, which varies
+     with nav wrapping, is measured rather than guessed). */
+  .vh-story-section { min-height: 170dvh; }
+  .vh-story {
+    position: sticky; top: var(--vh-header-h, 64px); z-index: 1;
+    height: calc(100dvh - var(--vh-header-h, 64px));
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+  }
+  .vh-story__rail {
+    flex: none; height: var(--vh-rail-h, 33vh);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--color-bg); border-bottom: 1px solid var(--color-divider);
+  }
+  .vh-story__rail .vh-viz { width: auto; height: 100%; max-width: 260px; }
+  .vh-story__rail .vh-step-list { display: none; }
+  .vh-story__pane {
+    flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    background: var(--color-bg);
+  }
 }
 

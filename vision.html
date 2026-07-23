@@ -131,6 +131,8 @@
             <circle class="vh-hub" data-phase="5" cx="220" cy="220" r="8.5" />
           </svg>
 
+          <p class="vh-phase-label" aria-hidden="true" style="display: none; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; color: var(--color-accent-700); font-weight: 600; margin: var(--space-1) 0 0;">01 Identität</p>
+
           <div class="blueprint vh-step-list" style="padding: var(--half) var(--space-3); margin-top: var(--half);">
             <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
             <span class="tag tag-outline vh-step" data-step="1" style="font-size: 11px;">01 Identität</span>
@@ -279,6 +281,9 @@ class Component extends DCLogic {
   _initScrollDrivenState() {
     const phaseSections = Array.from(document.querySelectorAll('.vh-phase'));
     const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    const rail = document.querySelector('.vh-story__rail');
+    const phaseLabel = document.querySelector('.vh-phase-label');
+    const PHASE_NAMES = { 1: 'Identität', 2: 'Verbindungen', 3: 'Kooperation', 4: 'Vertrauen', 5: 'Intelligenz' };
     if (!phaseSections.length && !revealEls.length) return;
 
     const setActivePhase = (phase) => {
@@ -294,6 +299,9 @@ class Component extends DCLogic {
         step.classList.toggle('tag-accent', active);
         step.classList.toggle('tag-outline', !active);
       });
+      if (phaseLabel && PHASE_NAMES[phase]) {
+        phaseLabel.textContent = String(phase).padStart(2, '0') + ' ' + PHASE_NAMES[phase];
+      }
     };
 
     let ticking = false;
@@ -314,6 +322,20 @@ class Component extends DCLogic {
           el.classList.add('is-visible');
         }
       });
+
+      /* Mobile only (see the fixed-position rail rule in styles.css): show
+         the corner badge exactly while a phase is active — phase > 0 means
+         phase 1's own trigger (the same check above) has fired, and once
+         the last phase section's bottom has scrolled above the viewport
+         we're past the story into the closing CTA. Reusing the phase
+         value itself (rather than a separate threshold on the wrapping
+         section) keeps the badge's visibility and the diagram's state
+         perfectly in sync instead of drifting apart. */
+      if (rail) {
+        const lastPhase = phaseSections[phaseSections.length - 1];
+        const pastEnd = lastPhase && lastPhase.getBoundingClientRect().bottom < 0;
+        rail.classList.toggle('is-in-view', phase > 0 && !pastEnd);
+      }
     };
     const onScroll = () => {
       if (!ticking) { ticking = true; requestAnimationFrame(compute); }

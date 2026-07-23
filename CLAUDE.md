@@ -46,6 +46,21 @@ This repository's real development history (see `git log`) has repeatedly found 
 
 Any new generated or geometric visual content (diagrams, icons, illustrations) gets a deliberate check for unintended symbolic resemblance before shipping — this project has hit this exact issue once already (a network diagram whose connection pattern read as an unintended symbol) and caught it. Don't skip this check because a rendering "looks cool" or "looks technical" — look at it deliberately for what it resembles, not just whether it's visually appealing.
 
+## Keeping the Architecture Review current
+
+[`docs/architecture-review.md`](./docs/architecture-review.md) is a living document, not a one-time snapshot. Update it whenever a change:
+
+- introduces a new module
+- changes module boundaries
+- extends the technology stack
+- requires new infrastructure
+- changes authentication or authorization
+- materially extends the domain model
+- introduces a new external dependency
+- affects security or privacy risk
+
+After a larger implementation, check whether the review's scores, risks, or recommended measures need to change as a result. Don't leave a finding marked as an open risk once you've actually fixed it, and don't leave a score stale once the thing it was scoring has materially changed — either update it in the same change, or explicitly note in the PR/commit why it still applies unchanged.
+
 ## Keep the documentation honest
 
 If you change code that a `docs/` file describes, update that file in the same change. If you find a doc that's already wrong, fix it as part of your change rather than working around the discrepancy silently. See `docs/README.md`'s "Keeping this documentation honest" section.

@@ -7,7 +7,6 @@
 </head>
 <body>
 <x-dc>
-
 <helmet>
   <link rel="stylesheet" href="_ds/industry-95c656ac-dba7-40f4-955b-adb820946ce8/styles.css">
   <script src="_ds/industry-95c656ac-dba7-40f4-955b-adb820946ce8/_ds_bundle.js"></script>
@@ -16,13 +15,10 @@
   <title>Vision &amp; Entwicklung — smartest.network</title>
   <meta name="description" content="Wie aus einzelnen Unternehmen Schritt für Schritt Europas intelligenteste Infrastruktur für Unternehmenskooperation entsteht — die Vision hinter smartest.network.">
 </helmet>
-
 <div style="--leading: var(--space-8); --half: var(--space-4); --edge: clamp(20px, 5vw, 72px); background: var(--color-bg); min-height: 100%;">
-
   <div style="background: var(--color-accent-900); color: #fff; text-align: center; padding: var(--space-2) var(--edge); font-size: 13px; line-height: var(--half);">
     Demo-Website mit fiktiven Beispielinhalten — Zahlen, Namen, Projekte und Zitate dienen ausschließlich zur Veranschaulichung.
   </div>
-
   <header style="border-bottom: 1px solid var(--color-divider); position: sticky; top: 0; background: var(--color-bg); z-index: 10;">
     <nav class="nav" style="max-width: 1280px; margin: 0 auto; padding: var(--space-3) var(--edge); flex-wrap: wrap; row-gap: var(--space-2); column-gap: var(--space-4); justify-content: center;">
       <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">smartest.network</a>
@@ -36,9 +32,7 @@
       <a class="btn btn-primary" href="index.html#membership">Mitglied werden</a>
     </nav>
   </header>
-
   <main style="max-width: 1280px; margin: 0 auto; padding: 0 var(--edge);">
-
     <!-- HERO -->
     <section style="padding: clamp(64px, 11vw, calc(var(--leading) * 5)) 0 clamp(48px, 8vw, calc(var(--leading) * 3)); text-align: center;">
       <div class="reveal" style="max-width: 760px; margin: 0 auto;">
@@ -61,13 +55,10 @@
         @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; } }
       </style>
     </section>
-
     <!-- SCROLL STORY -->
     <section aria-labelledby="story-heading" style="padding: 0 0 calc(var(--leading) * 2);">
       <h2 id="story-heading" class="sr-only">Die fünf Entwicklungsstufen des Netzwerks</h2>
-
       <div class="vh-story">
-
         <!-- STICKY RAIL: visualization + step indicator -->
         <div class="vh-story__rail">
           <p class="sr-only">Eine sich aufbauende Netzwerkgrafik: Sie zeigt, wie aus einzelnen, unverbundenen Unternehmen über Verbindungen und Kooperation ein Netzwerk mit wachsendem gegenseitigen Vertrauen und schließlich einer zentralen, intelligenten Vermittlungsinstanz entsteht.</p>
@@ -81,21 +72,16 @@
             <line class="vh-edge" data-phase="2" x1="96"  y1="344" x2="46"  y2="220" />
             <line class="vh-edge" data-phase="2" x1="46"  y1="220" x2="96"  y2="96"  />
             <line class="vh-edge" data-phase="2" x1="96"  y1="96"  x2="220" y2="46"  />
-            <!-- edges: inner-to-outer (phase 3) -->
-            <line class="vh-edge" data-phase="3" x1="280" y1="160" x2="344" y2="96"  />
-            <line class="vh-edge" data-phase="3" x1="280" y1="160" x2="394" y2="220" />
-            <line class="vh-edge" data-phase="3" x1="280" y1="280" x2="344" y2="344" />
-            <line class="vh-edge" data-phase="3" x1="280" y1="280" x2="220" y2="394" />
-            <line class="vh-edge" data-phase="3" x1="160" y1="280" x2="96"  y2="344" />
-            <line class="vh-edge" data-phase="3" x1="160" y1="280" x2="46"  y2="220" />
-            <line class="vh-edge" data-phase="3" x1="160" y1="160" x2="96"  y2="96"  />
-            <line class="vh-edge" data-phase="3" x1="160" y1="160" x2="220" y2="46"  />
+            <!-- edges: inner square (phase 3) -->
+            <line class="vh-edge" data-phase="3" x1="280" y1="160" x2="280" y2="280" />
+            <line class="vh-edge" data-phase="3" x1="280" y1="280" x2="160" y2="280" />
+            <line class="vh-edge" data-phase="3" x1="160" y1="280" x2="160" y2="160" />
+            <line class="vh-edge" data-phase="3" x1="160" y1="160" x2="280" y2="160" />
             <!-- edges: hub (phase 5) -->
             <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="280" y2="160" />
             <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="280" y2="280" />
             <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="160" y2="280" />
             <line class="vh-edge" data-phase="5" x1="220" y1="220" x2="160" y2="160" />
-
             <!-- trust rings (phase 4) -->
             <circle class="vh-node-ring" data-phase="4" cx="220" cy="46"  r="13" />
             <circle class="vh-node-ring" data-phase="4" cx="394" cy="220" r="13" />
@@ -109,7 +95,6 @@
             <circle class="vh-node-ring" data-phase="4" cx="280" cy="280" r="13" />
             <circle class="vh-node-ring" data-phase="4" cx="160" cy="280" r="13" />
             <circle class="vh-node-ring" data-phase="4" cx="160" cy="160" r="13" />
-
             <!-- outer nodes (phase 1: cardinal points) -->
             <circle class="vh-node-dot" data-phase="1" cx="220" cy="46"  r="5.5" />
             <circle class="vh-node-dot" data-phase="1" cx="394" cy="220" r="5.5" />
@@ -125,12 +110,10 @@
             <circle class="vh-node-dot" data-phase="3" cx="280" cy="280" r="5.5" />
             <circle class="vh-node-dot" data-phase="3" cx="160" cy="280" r="5.5" />
             <circle class="vh-node-dot" data-phase="3" cx="160" cy="160" r="5.5" />
-
             <!-- hub (phase 5) -->
             <circle class="vh-hub-pulse" data-phase="5" cx="220" cy="220" r="9" />
             <circle class="vh-hub" data-phase="5" cx="220" cy="220" r="8.5" />
           </svg>
-
           <div class="blueprint vh-step-list" style="padding: var(--half) var(--space-3); margin-top: var(--half);">
             <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
             <span class="tag tag-outline vh-step" data-step="1" style="font-size: 11px;">01 Identität</span>
@@ -144,10 +127,8 @@
             <span class="tag tag-outline vh-step" data-step="5" style="font-size: 11px;">05 Intelligenz</span>
           </div>
         </div>
-
         <!-- SCROLLING NARRATIVE -->
         <div>
-
           <div class="vh-phase" data-phase="1">
             <div class="reveal">
               <svg class="vh-viz vh-phase-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
@@ -168,7 +149,6 @@
               </div>
             </div>
           </div>
-
           <div class="vh-phase" data-phase="2">
             <div class="reveal">
               <svg class="vh-viz vh-phase-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
@@ -201,7 +181,6 @@
               </div>
             </div>
           </div>
-
           <div class="vh-phase" data-phase="3">
             <div class="reveal">
               <svg class="vh-viz vh-phase-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
@@ -213,14 +192,11 @@
                 <line class="vh-edge is-active" x1="96"  y1="344" x2="46"  y2="220" />
                 <line class="vh-edge is-active" x1="46"  y1="220" x2="96"  y2="96"  />
                 <line class="vh-edge is-active" x1="96"  y1="96"  x2="220" y2="46"  />
-                <line class="vh-edge is-active" x1="280" y1="160" x2="344" y2="96"  />
-                <line class="vh-edge is-active" x1="280" y1="160" x2="394" y2="220" />
-                <line class="vh-edge is-active" x1="280" y1="280" x2="344" y2="344" />
-                <line class="vh-edge is-active" x1="280" y1="280" x2="220" y2="394" />
-                <line class="vh-edge is-active" x1="160" y1="280" x2="96"  y2="344" />
-                <line class="vh-edge is-active" x1="160" y1="280" x2="46"  y2="220" />
-                <line class="vh-edge is-active" x1="160" y1="160" x2="96"  y2="96"  />
-                <line class="vh-edge is-active" x1="160" y1="160" x2="220" y2="46"  />
+                <line class="vh-edge is-active" x1="280" y1="160" x2="280" y2="280" />
+                <line class="vh-edge is-active" x1="280" y1="280" x2="160" y2="280" />
+                <line class="vh-edge is-active" x1="160" y1="280" x2="160" y2="160" />
+                <line class="vh-edge is-active" x1="160" y1="160" x2="280" y2="160" />
+
                 <circle class="vh-node-dot is-active" cx="220" cy="46"  r="5.5" />
                 <circle class="vh-node-dot is-active" cx="394" cy="220" r="5.5" />
                 <circle class="vh-node-dot is-active" cx="220" cy="394" r="5.5" />
@@ -246,7 +222,6 @@
               </div>
             </div>
           </div>
-
           <div class="vh-phase" data-phase="4">
             <div class="reveal">
               <svg class="vh-viz vh-phase-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
@@ -258,14 +233,11 @@
                 <line class="vh-edge is-active is-trusted" x1="96"  y1="344" x2="46"  y2="220" />
                 <line class="vh-edge is-active is-trusted" x1="46"  y1="220" x2="96"  y2="96"  />
                 <line class="vh-edge is-active is-trusted" x1="96"  y1="96"  x2="220" y2="46"  />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="344" y2="96"  />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="394" y2="220" />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="344" y2="344" />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="220" y2="394" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="96"  y2="344" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="46"  y2="220" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="96"  y2="96"  />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="220" y2="46"  />
+                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="280" y2="280" />
+                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="160" y2="280" />
+                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="160" y2="160" />
+                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="280" y2="160" />
+
                 <circle class="vh-node-ring is-active" cx="220" cy="46"  r="13" />
                 <circle class="vh-node-ring is-active" cx="394" cy="220" r="13" />
                 <circle class="vh-node-ring is-active" cx="220" cy="394" r="13" />
@@ -303,7 +275,6 @@
               </div>
             </div>
           </div>
-
           <div class="vh-phase" data-phase="5">
             <div class="reveal">
               <svg class="vh-viz vh-phase-viz" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
@@ -315,14 +286,11 @@
                 <line class="vh-edge is-active is-trusted" x1="96"  y1="344" x2="46"  y2="220" />
                 <line class="vh-edge is-active is-trusted" x1="46"  y1="220" x2="96"  y2="96"  />
                 <line class="vh-edge is-active is-trusted" x1="96"  y1="96"  x2="220" y2="46"  />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="344" y2="96"  />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="394" y2="220" />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="344" y2="344" />
-                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="220" y2="394" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="96"  y2="344" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="46"  y2="220" />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="96"  y2="96"  />
-                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="220" y2="46"  />
+                <line class="vh-edge is-active is-trusted" x1="280" y1="160" x2="280" y2="280" />
+                <line class="vh-edge is-active is-trusted" x1="280" y1="280" x2="160" y2="280" />
+                <line class="vh-edge is-active is-trusted" x1="160" y1="280" x2="160" y2="160" />
+                <line class="vh-edge is-active is-trusted" x1="160" y1="160" x2="280" y2="160" />
+
                 <line class="vh-edge is-active is-trusted" x1="220" y1="220" x2="280" y2="160" />
                 <line class="vh-edge is-active is-trusted" x1="220" y1="220" x2="280" y2="280" />
                 <line class="vh-edge is-active is-trusted" x1="220" y1="220" x2="160" y2="280" />
@@ -366,11 +334,9 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
     <!-- CLOSING CTA -->
     <section style="padding: calc(var(--leading) * 2) 0 calc(var(--leading) * 3); text-align: center; border-top: 1px solid var(--color-divider);">
       <div class="reveal">
@@ -381,7 +347,6 @@
         </div>
       </div>
     </section>
-
     <footer style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; align-items: center; padding: calc(var(--leading) * 1.5) 0; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 70%, transparent);">
       <span>© 2026 smartest.network</span>
       <div style="display: flex; gap: var(--space-4);">
@@ -389,10 +354,8 @@
         <a href="https://smartest.network/impressum-2-2/">Impressum</a>
       </div>
     </footer>
-
   </main>
 </div>
-
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
@@ -404,7 +367,6 @@ class Component extends DCLogic {
   componentDidUpdate() {
     if (window.lucide) window.lucide.createIcons();
   }
-
   /* Scoped to the desktop rail's own diagram — the per-phase mobile
    * diagrams (.vh-phase-viz) are static snapshots baked directly into the
    * markup as fixed classes, not driven by scroll state, and don't carry
@@ -416,7 +378,6 @@ class Component extends DCLogic {
       line.style.strokeDashoffset = String(len);
     });
   }
-
   /* A single rAF-throttled scroll handler drives both the reveal-on-scroll
    * fades and the desktop rail's network phase state. IntersectionObserver's
    * threshold/rootMargin bands are too thin to survive a fast or instant
@@ -428,7 +389,6 @@ class Component extends DCLogic {
     const phaseSections = Array.from(document.querySelectorAll('.vh-phase'));
     const revealEls = Array.from(document.querySelectorAll('.reveal'));
     if (!phaseSections.length && !revealEls.length) return;
-
     const setActivePhase = (phase) => {
       document.querySelectorAll('.vh-story__rail [data-phase]').forEach((el) => {
         const p = Number(el.getAttribute('data-phase'));
@@ -443,12 +403,10 @@ class Component extends DCLogic {
         step.classList.toggle('tag-outline', !active);
       });
     };
-
     let ticking = false;
     const compute = () => {
       ticking = false;
       const vh = window.innerHeight;
-
       let phase = 0;
       for (const el of phaseSections) {
         if (el.getBoundingClientRect().top <= vh / 2) {
@@ -456,7 +414,6 @@ class Component extends DCLogic {
         }
       }
       if (phase > 0) setActivePhase(phase);
-
       revealEls.forEach((el) => {
         if (!el.classList.contains('is-visible') && el.getBoundingClientRect().top < vh * 0.92) {
           el.classList.add('is-visible');
@@ -466,7 +423,6 @@ class Component extends DCLogic {
     const onScroll = () => {
       if (!ticking) { ticking = true; requestAnimationFrame(compute); }
     };
-
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
     compute();

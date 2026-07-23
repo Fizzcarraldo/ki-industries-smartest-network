@@ -43,6 +43,7 @@ If you're new to this project, read in this order:
 | [`constitution.md`](./constitution.md) | The rules that don't change without deliberate amendment |
 | [`adr/`](./adr/README.md) | Architecture Decision Records — the *why* behind major choices |
 | [`engineering-report.md`](./engineering-report.md) | Assessment of the current codebase, technical debt, prioritized roadmap |
+| [`architecture-review.md`](./architecture-review.md) | Formal, scored review across 21 areas (security, data privacy, dependencies, accessibility, testability, etc.) — the detailed evidence base the Engineering Report's conclusions rest on |
 
 ## Keeping this documentation honest
 
